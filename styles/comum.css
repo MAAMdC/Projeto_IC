@@ -1,0 +1,640 @@
+/* GERAL /////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+:root{
+  /* background-color: #378BA0; */
+  font-family: 'Poppins',sans-serif;
+}
+  
+*,
+*:before,
+*:after{
+  padding: 0;
+  margin: 0;
+}
+  
+/* IMAGENS /////////////// */
+img{
+  width:17%;
+}
+
+/* TEXTOS //////////////// */
+h1{
+  text-align: center;
+  font-weight: 800;
+  font-size: 60px;
+  display: block;
+  margin: auto;
+  margin-top:30px;
+  /* color: #378BA0; */
+}
+
+p {
+  font-size:18px;
+  font-weight:400;
+}
+
+/* LAYOUT //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/* Fundo com dimensao pedida */
+#container {
+  width: 1280px;
+  height: 720px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Orienta o layout das paginas com sidebar fechada */
+#grid {
+  display: grid; 
+  grid-template-columns: 1220px 60px; 
+  grid-template-rows: 100%; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+      "corpo sidebar"; 
+}
+
+.corpo { grid-area: corpo; } /* Depende da página */
+
+/* Configuração geral da Sidebar */
+.sidebar {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 25% 10% 50% 15%;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "user"
+    "botao"
+    "nav"
+    "navBaixo";
+  grid-area: sidebar;
+  border-radius:0 15px 15px 0;
+  transition: width 0.2s;
+  filter:none;
+  z-index:98;
+}
+
+.user { 
+  grid-area: user; 
+
+  display:flex;
+  align-items:center;
+}
+
+.user img{
+  height:5vh;
+  width:auto;
+
+  margin-left:8px;
+  margin-left:10px;
+} 
+
+.user img:hover{
+  cursor: pointer;
+  margin-top:-7px;
+}
+
+.user h3{
+  margin-left:15px;
+}
+.user h3:hover{
+  cursor: pointer;
+}
+.botao { 
+  grid-area: botao; 
+
+  margin:auto;
+}
+  
+.nav { 
+  grid-area: nav;
+
+  margin-top:10%;
+}
+
+.nav img{ 
+  height:3.2vh; 
+  width:auto;
+}
+
+.nav li{
+  padding:3%;
+  margin-left:12px;
+  margin-left:14px;
+  list-style:none;
+}
+
+.nav li:hover{
+  
+  width:185px;
+  margin-left:0;
+  overflow: hidden;
+  transition:  margin-left 0.2s;
+
+  border-radius:15px 0 0 15px;
+  cursor: pointer;
+}
+
+.nav a{
+  display:flex;
+  text-decoration:none;
+  align-items:center;
+}
+
+.nav p{
+  margin-left:20px;
+}
+
+.baixo { 
+  grid-area: navBaixo;
+}
+
+/* Active */
+.active{
+/*  box-shadow: rgba(55, 139, 160, 0.316) 0px 4px 12px;
+    border-radius: 15px 0 0 15px;
+    margin-right:0; */
+/*  border-right:6px solid #378BA0; */
+}
+
+.active p{
+  font-weight: bold;
+}
+
+/* Sidebar outras configuracoes */
+.sidebarFechada {
+  display: grid; 
+  grid-template-columns: 60px; 
+  grid-template-rows: 720px; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "sidebar"; 
+
+  position:absolute;
+  right:0;
+  width:60px;
+  overflow:hidden;
+  transition: width 0.2s;
+  z-index:98;
+}
+
+.sidebarFechada:hover{
+  width:185px;
+  border-radius:0 15px 15px 0;
+}
+
+.sidebarFechada .nav li{
+  margin-bottom:10%;
+}
+
+/* Scrollbar Personalizada */
+::-webkit-scrollbar {
+  width: 18px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+/* Envio de mensagens - input e botao */
+.envioMensagem{
+  grid-area:areaMensagens;
+  height: 35px;
+  width: 80%;
+  border-radius:20px;
+  margin:auto;
+  margin-bottom:30px;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+}
+
+.envioMensagem ul{
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
+}
+
+.envioMensagem li{
+  list-style:none;
+}
+
+input.texto{
+  width:570px;
+  border:none;
+  background-color:transparent;
+  margin-left:15px;
+}
+
+.envio{
+  visibility: visible;
+  width: 40px;
+  height: 30px;
+  border:none;
+  border-radius:20px;
+  /* background-color:#378BA0; */
+  margin-top:3px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.envio:hover{
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+.clipMove{
+  margin-left:55px;
+}
+
+input, textarea{
+  font-family: 'Poppins', sans-serif;
+}
+
+input:focus, textarea:focus, select:focus{
+  outline: none;
+}
+
+.clip{
+  width:20px;
+  height: auto;
+  margin-right:22px;
+  margin-top:3px;
+}
+
+.clip:hover{
+  margin-top:0px;
+  transition:  margin-top 0.2s;
+}
+
+/* Botoes */
+.botoes button, .botao button, .confirmacao button, .botoesFicheiro button{
+  width:150px;
+  height:45px;
+
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 25px;
+  /* background: lightgrey; */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  justify-content:space-evenly;
+  font-family: 'Poppins',sans-serif;
+}
+
+.botoes button:hover , .botao button:hover, .botoesFicheiro button:hover{
+  margin-top:-2px;
+}
+
+.botao img{
+  width:12%; 
+}
+
+.botao p{
+  font-size:14px;
+  margin-left:-6%;
+}
+
+/* Separador no topo da pagina */
+.separator{
+  display:flex;
+  align-items: center;
+  justify-content:center;
+}
+
+.separator .line{
+  height: 1px;
+  flex: 0.47;
+}
+
+/* POPUPS ////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.popInativo{
+  visibility: hidden;
+  display: none;
+  width: 384px;
+  height: 216px;
+  
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+  
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index:999;
+}
+
+/* Varia */
+.corpoPopup {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 10.8px 160.8px 45.4px;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "navegacao"
+    "conteudo"
+    "botoes";
+}
+
+.navegacao { 
+  grid-area: navegacao;
+  display:flex;
+  justify-content:end; 
+  height:40px;
+}
+
+.conteudoPop { 
+  grid-area: conteudo;
+  width:100%;
+  height:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  z-index:-1;
+}
+
+.botoes, .botao { 
+  display:flex;
+  justify-content:space-evenly;
+  margin-top:-10px;
+}
+
+.botoes{ 
+  grid-area: botoes; 
+}
+
+
+.fechar{
+  padding:10px;
+  height:25px;
+  width:auto;
+}
+
+.fechar:hover{
+  cursor: pointer;
+  margin-top: -1px;
+}
+
+.botoes button:hover{
+  margin-top:-2px;
+}
+
+/* Pop Up escolha de imagem na criacao de grupo */
+.popEscolheImg{
+  border-radius: 8px;
+  grid-template-rows: 20px 350px 50px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width:700px;
+}
+
+.contEscolheImg{
+  display: grid; 
+  grid-template-columns: 10% 80% 10%; 
+  grid-template-rows: 10% 80% 10%; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    ". . ."
+    ". iconGrupoEscolha ."
+    ". . ."; 
+   width:60%;
+   margin:auto;
+}
+
+.iconGrupoEscolha {
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "a b c"
+    "d e f"
+    "g h i"; 
+  grid-area: iconGrupoEscolha; 
+     margin-top:8px;
+}
+
+.iconGrupoEscolha img{
+  display:block;
+  margin:auto;
+  width:75px;
+  height:auto;
+}
+
+.a { grid-area: a; }
+.b { grid-area: b; }
+.c { grid-area: c; }
+.d { grid-area: d; }
+.e { grid-area: e; }
+.f { grid-area: f; }
+.g { grid-area: g; }
+.h { grid-area: h; }
+.i { grid-area: i; }
+
+div#overlay {
+  visibility: hidden;
+  position:fixed;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  z-index:100;
+  /* background-color:#444444; */
+  /* background-color:#4444447d; */
+  opacity:0.5;
+  filter:alpha(opacity=50);
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* DROPDOWN //////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* presente na pagina das Conversas */
+.dropdown-content {
+  display: block;
+  position: absolute;
+  top:65px;
+  right:205px;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius:15px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  border-radius:15px 15px 0 0;
+}
+
+.dropdown-content a:hover:last-child {
+  border-radius:0 0 15px 15px;
+}
+
+/* Esconde o dropdown */
+.dropdown-content {
+  display: none;
+}
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* CAIXA MENSAGENS ///////////////////////////////////////////////////////////////////////////////////////////////////// */
+.box {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  border-radius: 15px;
+  width:30%;
+  padding:2.5%;
+  margin:2%;
+}
+
+.box p{
+  overflow: hidden;
+  margin-bottom:6px;
+}
+
+.darker {
+  margin-left:530px;
+  display:inline-grid;
+}
+
+.darker h3, .darker p{
+  text-align: right;
+  font-size:auto;
+}
+
+.box img {
+  float: left;
+  width: 23%;
+  display:block;
+  margin:auto;
+  margin-right: 5%;
+}
+
+.time-right {
+  float: right;
+  /* color: #aaa; */
+  margin-top:-7px;
+}
+
+.time-left {
+  float: left;
+  margin-bottom:-18px;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* CONTACTOS /////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#caixa_contactos{
+
+  grid-area: contactos;
+  /* border: 3px solid #ccc; */
+  /* border: 3px solid#e1e1e161; */
+  box-shadow: rgb(0 0 0 / 10%) 0px 1px 2px 0px;
+  border-radius: 15px;
+
+  overflow-y: scroll; 
+  overflow-x:hidden;
+  display: inline;
+  margin-left: 50px;
+  margin-right: 50px;
+  /* background-color:#eeeeee; */
+
+}
+
+#contacto{
+  display: grid;
+  grid-template-columns: 100px 350px 50px 25px 50px 25px;
+  grid-template-columns: 100px 250px 50px 25px 50px 25px;
+
+  grid-template-areas: 'avatar nome icone1 . icone2 retirar';
+  /* border-bottom:3px solid #e1e1e161 ; */
+  overflow:hidden;
+}
+
+#contacto li{
+  display: inline;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#avatar{
+  grid-area: avatar;
+}
+
+#nome{
+  grid-area: nome;
+  font-size:20px;
+}
+
+#ic1{
+  grid-area: icone1;
+}
+
+#ic3{
+  grid-area: icone2;
+}
+
+img.avatar{
+  width: 80px;
+  height: 80px;
+  margin-left:10px;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.chamadaMinimizada {
+  cursor: pointer;
+  position: fixed;
+  left: 35%;
+  top: 2%;
+  background-color: rgba(126, 119, 119, 0.3);
+  width: 30%;
+  height: 13%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  border: 2px gray;
+  border-radius: 15px;
+}
+
+.chamadaMinimizada:hover {
+  background-color: rgb(204 204 204);
+}
+
+.imgChamadaMinimizada {
+  margin-left: 20px;
+  padding: 10px;
+  width: 60px;
+  margin-top:-5px;
+  height: auto;
+}
+
+.para{
+  font-size: 30px;
+}
+
+.botaoDesligar {
+  position: fixed;
+  left: 765px;
+  top: 45px;
+  width: 28px;
+  height: auto;
+}
+
+.botaoVolume {
+  position: fixed;
+  left: 710px;
+  top: 44px;
+  width: 30px;
+  height: auto;
+}

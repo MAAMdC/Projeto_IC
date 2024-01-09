@@ -1,0 +1,410 @@
+/* Orienta o layout da pagina das conversas */
+#gridConversas {
+  display: grid;
+  grid-template-columns: 256px 839px 185px;
+  grid-template-rows: 720px;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+      "mensagens chat sidebar";
+}
+
+.sidebar { grid-area: sidebar; }
+
+.mensagens {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 80px 80px 80px 80px 80px 80px 80px 80px 80px;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "msg1"
+    "msg2"
+    "msg3"
+    "msg4"
+    "msg5"
+    "msg6"
+    "msg7"
+    "msg8"
+    "msg9";
+  grid-area: mensagens;
+  border-radius:15px 0 0 15px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+  
+.caixaMensagem {
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  grid-template-rows: 10% 80% 10%;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+  ". . ."
+  ". info ."
+  ". . .";
+  box-shadow: rgb(0 0 0 / 10%) 0px 1px 2px 0px;
+}
+
+.caixaMensagem:last-child{ border-bottom:none; }
+
+.caixaMensagem:hover{
+  transition:  background-color 0.2s;
+  cursor: pointer;
+}
+
+.caixaMensagem:hover:last-child{ border-radius: 0 0 0 15px; }
+
+.info {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-template-rows: 100%;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+      "icone texto";
+  grid-area: info;
+  margin-top:6%;
+}
+
+.texto {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 50% 50%;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+      "nome"
+      "ultimaMsg";
+  grid-area: texto;
+  margin-left:10%;
+  margin-right:-6px;
+  overflow:hidden; 
+}
+
+.nome{ grid-area: nome; }
+.ultimaMsg{ grid-area: ultimaMsg; }
+
+.texto p { 
+  font-size: 14px;
+  margin-top: 2px;
+  overflow:hidden;
+}
+
+.icone { grid-area: icone; }
+
+.icone img{
+  width:100%;
+  height:auto;
+}
+
+.chat {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 80px 640px;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+      "infoConversa"
+      "areaMensagens"; 
+  grid-area: chat;
+}
+
+.selected{
+  border-bottom:none;
+  border-radius:15px 0 0 0; 
+  /* box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px; */
+}
+
+.infoConversa {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding: 3%;
+}
+
+.iconInfo{
+  width:65px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.iconInfo img{
+  height:25px;
+  width:auto;
+}
+
+.iconInfo img:hover{
+  transform: scale(1.03);
+  cursor: pointer;
+}
+.infoConversa h3{
+  font-weight:bold;
+}
+
+.areaMensagens{ 
+  grid-area: areaMensagens;
+  visibility: visible;
+  overflow:auto;
+  overscroll-behavior: auto;
+  overflow-x: hidden;
+  height:85%;
+}
+
+.areaParticipantes{
+  grid-area: areaMensagens;
+  visibility: hidden;
+  overflow:auto;
+}
+/* .box {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  border-radius: 15px;
+  width:30%;
+  padding:2.5%;
+  margin:2%;
+}
+
+.box p{
+  overflow: hidden;
+  margin-bottom:6px;
+}
+
+.darker {
+  margin-left:530px;
+  display:inline-grid;
+}
+
+.darker h3, .darker p{
+  text-align: right;
+  font-size:auto;
+}
+
+.box img {
+  float: left;
+  width: 23%;
+  display:block;
+  margin:auto;
+  margin-right: 5%;
+}
+
+.time-right {
+  float: right;
+  margin-top:-7px;
+}
+
+.time-left {
+  float: left;
+  margin-bottom:-18px;
+} */
+
+.sidebarAberta {
+  display: grid;
+  grid-template-columns: 185px;
+  grid-template-rows: 720px;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+  "sidebar";
+  overflow:hidden;
+}
+
+/* .envioMensagem{
+  grid-area:areaMensagens;
+  height: 35px;
+  width: 80%;
+  border-radius:20px;
+  margin:auto;
+  margin-bottom:30px;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+}
+
+.envioMensagem ul{
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
+}
+
+.envioMensagem li{
+  list-style:none;
+}
+
+input.texto{
+    width:570px;
+    border:none;
+    background-color:transparent;
+    margin-left:15px;
+}
+
+.envio{
+    width: 40px;
+    height: 30px;
+    border:none;
+    border-radius:20px;
+   
+    margin-top:3px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.envio:hover{
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+
+textarea{
+
+  font-family: 'Poppins', sans-serif;
+}
+
+input:focus, textarea:focus, select:focus{
+  outline: none;
+}
+
+.clip{
+  width:20px;
+  height: auto;
+  margin-right:22px;
+  margin-top:3px;
+}
+
+.clip:hover{
+  margin-top:0px;
+  transition:  margin-top 0.2s;
+} */
+
+
+.ficheiro{
+   margin-left:150px;
+   margin-left:200px;
+}
+
+.nomeFich{
+font-size:14px;
+}
+
+.file{
+height:110px;
+}
+
+.file img{
+margin-left:0px;
+}
+
+.file p{
+margin-top:60px;
+margin-left:0px;
+}
+
+.seta{
+position:absolute;
+width:25px;
+height:auto;
+margin-top:6px;
+margin-left:-32px;
+}
+
+.seta:hover{
+visibility: hidden;
+transform: scale(1.02);
+cursor: pointer;
+}
+
+.separator{
+display:flex;
+align-items: center;
+justify-content:center;
+}
+
+.separator .line{
+height: 1px;
+flex: 0.3;
+/* background-color: #e5e5e5; */
+}
+
+.separator p{
+padding: 0 1rem;
+font-size:14px;
+/* color:#aaa; */
+}
+
+/* por no comum - contactos */
+/* #caixa_contactos{
+
+grid-area: contactos;
+
+box-shadow: rgb(0 0 0 / 10%) 0px 1px 2px 0px;
+border-radius: 15px;
+
+overflow-y: scroll; 
+overflow-x:hidden;
+display: inline;
+margin-left: 50px;
+margin-right: 50px;
+
+} */
+
+/* #contacto{
+display: grid;
+grid-template-columns: 100px 350px 50px 25px 50px 25px;
+grid-template-columns: 100px 250px 50px 25px 50px 25px;
+
+grid-template-areas: 'avatar nome icone1 . icone2 .';
+
+overflow:hidden;
+}
+
+#contacto li{
+display: inline;
+margin-top: auto;
+margin-bottom: auto;
+} */
+
+/* #avatar{
+grid-area: avatar;
+}
+
+#nome{
+grid-area: nome;
+font-size:20px;
+}
+
+#ic1{
+grid-area: icone1;
+width: 220px;
+height: auto;
+}
+
+#ic3{
+grid-area: icone2;
+}
+
+.avatar{
+width: 80px;
+height: 80px;
+margin-left:10px;
+}
+
+#semSelecao{
+visibility: visible;
+grid-area: areaMensagens;
+text-align:center;
+margin-top:230px;
+}
+
+#iconePagina{
+visibility: visible;
+} */
+
+#retirar{
+  grid-area:retirar;
+  margin-left:260px;
+}
+
+#retirar img{
+  width:25px;
+  height:auto;
+  display:block;
+  margin:auto;
+}
+

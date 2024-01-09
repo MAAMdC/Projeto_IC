@@ -1,0 +1,89 @@
+body{
+    display: grid;
+
+    grid-template-columns: 200px 220px 220px 220px 220px 200px ;
+    grid-template-rows: 250px 220px 250px;
+    grid-template-areas: 
+        'titulo titulo titulo titulo titulo titulo'
+        ' . icone1 icone2 icone3 icone4 .'
+        'icone5 icone8 . . icone6 icone7';
+}
+
+h1{ grid-area: titulo; }
+
+li{ display: inline; }
+
+#ic1{
+    grid-area: icone1;
+    text-align: center;
+    margin: auto;
+}
+
+#ic2{
+    grid-area: icone2;
+    text-align: center;
+    margin: auto;
+}
+
+#ic3{
+    grid-area: icone3;
+    text-align: center;
+    margin: auto;
+}
+
+#ic4{
+    grid-area: icone4;
+    text-align: center;
+    margin: auto;
+}
+
+#ic5{
+    grid-area: icone5;
+    text-align: center;
+    margin-top: auto;
+}
+
+#ic6{    
+    grid-area: icone6;
+    text-align: right;
+    margin-top: auto;
+}
+
+#ic7{    
+    grid-area: icone7;
+    text-align: center;
+    margin-top: auto;
+}
+
+#ic8{    
+    grid-area: icone8;
+    margin-top:165px;
+    width:60px;
+}
+
+#ic8 img{    
+   width:53px;
+   height:auto;
+}
+
+img.iconesBaixo{
+    width: 60px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+img.mainIcones{
+    width: 100px;
+    height: auto;
+
+    padding: 3vh;
+    border-radius: 3vh;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+img.mainIcones:hover, .iconesBaixo:hover{
+    transition: transform 0.2s;
+    transform: scale(1.05);
+    height: auto;
+    cursor: pointer;
+}

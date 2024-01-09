@@ -1,0 +1,131 @@
+.corpo {
+    display: grid;
+    grid-template-columns: 1280px;
+    grid-template-rows: 144px 72px 468px 36px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "titulo"
+      "ajuda"
+      "ajuda"
+      ".";
+  }
+  
+  .titulo { grid-area: titulo; }
+  
+  .contactos {
+    display: grid;
+    grid-template-columns: 240px 800px 240px;
+    grid-template-rows: 100%;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". caixa_contactos .";
+    grid-area: ajuda;
+    list-style:none;
+    
+  }
+  
+  #caixa_contactos { grid-area: caixa_contactos; }
+
+ .ajuda{
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: 400;
+}
+  
+
+  .contacto{
+    grid-template-columns: 100px 700px;
+    display: flex;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s
+  }
+
+  img.avatar {
+    width: 60px;
+    height: 60px;
+    margin: 10px 10px 15px 10px;
+    float: left;
+}
+
+
+  .according_anwser {
+    padding: 0 15px;
+    margin-left: 25px;
+    text-align: justify;
+    display: block;
+    transition: max-height 0.5s ease-out;
+    overflow: hidden;
+    max-height: 0px;
+
+  }
+
+  .according_anwser.show {
+    padding: 0 15px;
+    margin-left: 25px;
+    max-height: 1000px;
+    text-align: justify;
+    display: block;
+    transition: max-height 0.5s ease-out;
+  }
+
+
+
+  .according_anwser p{
+    font-size: 18px;
+    text-decoration: none;
+    text-align: justify;
+    display: block;
+    padding: 12px 30px;
+  }
+
+  #helpViewer1, #helpViewer2, #helpViewer3,
+  #helpViewer4, #helpViewer5, #helpViewer6, #helpViewer7 {
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+      margin-top: 25px;
+      margin-left: -26%;
+      transition: all 200ms linear;
+  }
+
+
+
+  .ajuda {
+    width: 700px;
+    margin: 22px 0 0 20px;
+    font-size: 25px;
+
+  }
+
+  #ic{
+
+    display: grid;
+
+    grid-template-columns: 10% 90%;
+    /* grid-template-rows: 50px; */
+
+    grid-template-areas: 
+          'imagem texto';
+  }
+
+  #img_texto{
+    grid-area: imagem;
+    width: 80%;
+    margin: 10px;
+  }
+
+  #texto{
+    grid-area: texto;
+  }

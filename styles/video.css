@@ -1,0 +1,131 @@
+.corpo {
+    display: grid;
+    grid-template-columns: 1280px;
+    grid-template-rows: 144px 72px 468px 36px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "titulo"
+      "descricao"
+      "contactos"
+      ".";
+  }
+  
+  .titulo { grid-area: titulo; }
+  
+  .contactos {
+    display: grid;
+    grid-template-columns: 340px 600px 340px;
+    grid-template-rows: 100%;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". caixa_contactos .";
+    grid-area: contactos;
+  }
+  
+  #caixa_contactos { grid-area: caixa_contactos; }
+  
+  .descricao { 
+      grid-area: descricao;
+      display: grid;
+      grid-template-columns: 340px 600px 340px;
+      grid-template-rows: 100%;
+      gap: 0px 0px;
+      grid-auto-flow: row;
+      grid-template-areas:
+      ". texto .";
+  }
+  
+  .texto{
+    grid-area:texto;
+    display:flex;
+    justify-content:center;
+
+  }
+
+  /* VEM DOS CONTACTOS COM ALGUMAS DIFERENÇAS */
+  #caixa_contactos{
+    border: 3px solid #ccc;
+    border: 3px solid#e1e1e161;
+    box-shadow: rgb(0 0 0 / 10%) 0px 1px 2px 0px;
+    border-radius: 15px;
+
+    overflow-y: scroll; /* SÃƒÂ³ o eixo y*/
+    display: inline;
+    background-color:#eeeeee;
+
+}
+#contacto{
+    /* background-color: rgba(148, 148, 148, 0.5); */
+
+    /* border: 1px solid black;  NÃƒÂ£o consegui por mais fino, vejam se preferem com ou sem*/
+    
+    display: grid;
+    grid-template-columns: 100px 350px 50px 25px 50px 25px;
+
+    grid-template-areas: 'avatar nome icone1 . icone2 .';
+    border-bottom:3px solid #e1e1e161 ;
+
+}
+#contacto:hover{
+    background-color: #e3e3e3;
+   }
+#contacto li{
+    display: inline;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#avatar{
+    grid-area: avatar;
+}
+
+#nome{
+    grid-area: nome;
+    font-size: 30px;
+}
+
+#ic1{
+    grid-area: icone1;
+}
+
+#ic3{
+    grid-area: icone2;
+}
+
+img{
+    width: 40px;
+    height: 40px;
+}
+
+img.avatar{
+
+    width: 80px;
+    height: 80px;
+    margin-left:10px;
+
+}
+
+.botoes{
+    cursor: pointer;
+}
+
+.botoes:hover{
+    transition: transform 0.2s;
+    transform: scale(1.05);
+}
+
+
+/* POR NO COMUM */
+.separator{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+  }
+  
+  .separator .line{
+    height: 1px;
+    flex: 0.47;
+    background-color: #e5e5e5;
+  }

@@ -1,0 +1,330 @@
+.corpo{
+  display: grid;
+  grid-template-columns: 600px 600px;
+  grid-template-rows: 125px 565px 20px;
+  grid-template-areas:
+      'titulo nome'
+      'contactos adiciona'
+      '. . ';
+}
+
+.corpo h1{
+  grid-area: titulo;
+  font-size: 40px;
+  margin-top: 50px;
+}
+
+.corpo #Back{
+  margin-top: 20px;
+  grid-area: titulo;
+  width: 40px;
+  height: auto;
+  margin-left:15px;
+}
+
+.corpo #Back:hover{
+  cursor: pointer;
+  margin-top:19px;
+}
+
+.nome{
+  grid-area: nome;
+  margin-top:65px;
+  display:flex;
+  justify-content:center;
+  margin-left:-60px;
+}
+
+.nome img{
+  height:20px;
+  width:auto;
+  margin:8px;
+}
+
+.adicionados{
+  margin-top:50px;
+  margin-bottom:20px;
+  height:340px;
+  width:90%;
+  margin-left:9.4px;
+  border-radius: 15px;
+  overflow-y:scroll;
+}
+
+.adicionadoTexto{
+  margin-top:31px;
+  margin-bottom:-40px;
+  font-weight:normal;
+  margin-left:210px;
+}
+
+.adiciona{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:20px;
+  width:80%;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+  margin-left:40px;
+}
+
+.adiciona input{
+  grid-area: adiciona;
+  width: 400px;
+  height: 30px;
+  font-family: 'Poppins',sans-serif;
+  border:none;
+  background-color:transparent;
+  margin-left:10px;
+}
+
+
+/* .adiciona{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:20px;
+  width:90%;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+  margin-left:9px;
+}
+
+.adiciona input{
+  grid-area: adiciona;
+  width: 400px;
+  height: 30px;
+  font-family: 'Poppins',sans-serif;
+  border:none;
+  background-color:transparent;
+  margin-left:-25px;
+} */
+
+.confirmacao ul {
+  width:80%;
+  display: flex;
+  justify-content:space-around;
+  margin-left:40px; 
+  margin-top:50px;  
+}
+
+.confirmacao ul li{
+  list-style:none;  
+}
+
+/* .confirmacao button{
+  grid-area: adiciona;
+
+  width:90px;
+  height:33px;
+
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 25px;
+
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  justify-content:space-evenly;
+  background-color:#378a9f;
+  font-family: 'Poppins',sans-serif;
+  margin-top:-20px;
+} */
+.confirmacao button{
+  margin-top:-20px;
+}
+
+.confirmacao button:hover{
+  margin-top:-22px;
+}
+
+input[type=checkbox]{
+  -ms-transform: scale(2); 
+  -moz-transform: scale(2); 
+  -webkit-transform: scale(2); 
+  -o-transform: scale(2); 
+  transform: scale(2);
+  padding: 10px;
+}
+
+input[type=checkbox]:hover{
+  cursor: pointer;
+}
+
+#contacto{
+  grid-template-areas: 'avatar nome icone1 . icone2 cruz';
+}
+#retirar{
+  grid-area: cruz;
+}
+
+#retirar img{
+  width:25px;
+  height:auto;
+  display:block;
+  margin:auto;
+}
+
+/* #caixa_contactos{
+
+  grid-area: contactos;
+
+  box-shadow: rgb(0 0 0 / 10%) 0px 1px 2px 0px;
+  border-radius: 15px;
+
+  overflow-y: scroll; 
+  overflow-x:hidden;
+  display: inline;
+  margin-left: 50px;
+  margin-right: 50px;
+
+
+}
+
+#contacto{
+  display: grid;
+  grid-template-columns: 100px 350px 50px 25px 50px 25px;
+  grid-template-columns: 100px 250px 50px 25px 50px 25px;
+
+  grid-template-areas: 'avatar nome icone1 . icone2 .';
+  overflow:hidden;
+}
+
+#contacto li{
+  display: inline;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#avatar{
+  grid-area: avatar;
+}
+
+#nome{
+  grid-area: nome;
+  font-size:20px;
+}
+
+#ic1{
+  grid-area: icone1;
+}
+
+#ic3{
+  grid-area: icone2;
+}
+
+img{
+  width: 40px;
+  height: 40px;
+}
+
+img.avatar{
+  width: 80px;
+  height: 80px;
+  margin-left:10px;
+} */
+
+/* .botoes{
+  cursor: pointer;
+} */
+
+.nomeGrupo{
+  width: 30%;
+  float: right;
+}
+
+.nome input{
+  width: 35vh;
+  height: 5vh;
+
+  padding: 2vh;
+
+  font-size: 16pt;
+  /* color: grey;  */
+
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  background: transparent;
+  /* Linha embaixo de cada input */
+  /* border-bottom: solid #378BA0 0.3vh;  */
+  font-family: 'Poppins',sans-serif;
+  /* color:black; */
+}
+
+.envio{
+  width: 30px;
+  height: 23px;
+  margin-left: 25px;
+  margin-top: -0.01px;
+}
+
+.envio:hover{
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+.msgErro{
+  display: none;
+  position: absolute;
+  bottom: 105px;
+}
+
+img.iconGrupo{
+  margin-top:-2px;
+  height:45px;
+  margin-left:-5px;
+  margin-right:15px;
+}
+
+img.iconGrupo:hover{
+  cursor: pointer;
+}
+
+.conteudoPop{
+  display: inline;
+  margin-top:50px;
+  z-index:1;
+  height:90px;
+}
+
+.imgSelect{
+  background-color: lightgray;
+  border-radius:10px;
+  transform: scale(1.1);
+}
+
+#imgSelect{
+  cursor: pointer;
+}
+
+#editar {
+  font-size:10pt;
+  margin-top:-15px; 
+  margin-left:-3px;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: #378ba0; 
+  text-decoration-thickness: 1px;
+}
+
+.a, .b, .c, .d, .e, .f, .g, .h, .i {
+  cursor: pointer;
+}
+
+.obrigatorio{
+  position:absolute;
+  color:red;
+  font-size:25px;
+  margin-left:300px;
+  margin-top:-60px;
+}
+
+.mail{
+  margin-top:6px;
+  margin-left:-520px; 
+}
+
+.contact{
+  margin-top:63px;
+  margin-left:420px; 
+}

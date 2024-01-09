@@ -1,0 +1,474 @@
+.miniChat {
+  display: grid;
+  grid-template-columns: 1280px;
+  grid-template-rows: 15% 75% 10%;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "atual"
+    "chat"
+    ".";
+  height: 720px;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  /* background-color: #eeeeee; */
+  border-radius:15px 0 0 15px;
+}
+
+.atual { 
+  width:420px;
+  grid-area: atual;
+  display: flex;
+  justify-content: space-around;
+  align-items:center;
+}
+
+.chat {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 90% 10%;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "areaMensagens"
+    "envioMensagem";
+  grid-area: chat;
+  width:420px;
+}
+.areaMensagens { 
+  grid-area: areaMensagens; 
+  overflow:auto;
+  overflow-y: scroll;
+  width:420px;
+  overflow-x:hidden;
+}
+
+.areaPaticipantes { 
+  grid-area: areaMensagens; 
+  overflow:auto;
+  overscroll-behavior: auto;
+  width:420px;
+  overflow-x:hidden;
+}
+/* Ver com o comum */
+.envioMensagem { 
+  visibility:visible;
+  grid-area: envioMensagem; 
+  width: 85%;
+}
+
+.envioMensagem ul{
+  margin-top:5px;
+}
+
+input.texto{
+  width:240px;
+}
+
+.clip{
+  margin-right:10px;
+  margin-top:-3px;
+  margin-left:28px;
+}
+
+.envio{
+  width: 38px;
+  margin-top: -3px;  
+  margin-top: 0.05px;
+}
+
+.clipMove{
+  margin-left:65px;
+}
+
+.miniChat .closeBtn {
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+
+  height: 40px;
+  width: 40px;
+
+  transition: 0.3s;
+  border-radius: 10px;
+
+  cursor: pointer;
+  box-shadow: none;
+}
+
+#callWindow {
+  height: 720px;
+  display: grid;
+  grid-template: 100px 520px 100px / 1fr;
+}
+.call{
+  position:relative;
+  }
+
+.callInfo {
+  grid-area: 1 / 1 / span 1 / span 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.openBtn {
+  background-color:transparent;
+  display:block;
+  width:50px;
+  height:50px;
+  cursor: pointer;
+
+  padding: 10px 15px;
+  border: none;
+  margin-left:15px;
+  margin-right:-15px;
+}
+
+.openBtn img, .closeBtn img{
+  width:30px;
+  height:auto;
+}
+
+.frame {
+  border-radius:15px;
+  margin: auto;
+  padding: 15px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* z-index:-2; */
+}
+
+.um .call{
+  display: block;
+  margin: auto;
+}
+
+.um .frame {
+  height: 300px;
+  width: 550px;
+}
+
+.dois .call{
+  display: flex;
+}
+
+.dois .frame {
+  height: 300px;
+  width: 42%;
+}
+
+.tres .call{
+  display: grid; 
+  grid-auto-columns: 1fr; 
+  grid-template-columns: 33% 33% 33%; 
+  grid-template-rows: 100%; 
+  gap: 0px 7px; 
+  grid-template-areas: 
+    ". . ."; 
+}
+
+.tres .frame {
+  height: 300px;
+  width: 80%;
+}
+
+.quatro .call{
+  grid-area: 2 / 1 / span 1 / span 1;
+  display: grid;
+  grid-template: 260px 260px / 1fr 1fr;
+}
+
+.quatro .frame {
+  height: 200px;
+  width: 65%;
+}
+
+.mais .call{
+  grid-area: 2 / 1 / span 1 / span 1;
+  display: grid;
+  grid-template: 260px 260px / 1fr 1fr;
+  overflow-x:hidden;
+  overflow-y:scroll;
+  /* z-index: -1; */
+}
+
+.mais .frame {
+  height: 190px;
+  width: 65%;
+}
+
+.callParticipant {
+  margin: auto;
+  height: 200px;
+  width: 200px;
+}
+
+.callControls {
+  grid-area: 3 / 1 / span 1 / span 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.optionButton {
+  /* background-color: #eeeeee; */
+  cursor: pointer;
+  height: 60px;
+  width: 60px;
+  margin: 5px;
+  border: none;
+  border-radius: 15px;
+  box-shadow: rgb(0 0 0 / 10%) 0px 4px 6px -1px, rgb(0 0 0 / 6%) 0px 2px 4px -1px;
+}
+.optionButton:hover{
+  margin-top:-2px;
+}
+
+.optionButton img, .endCallBtn img{
+  width:25px;
+  height:auto;
+}
+
+.endCallBtn {
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+  /* background-color: #ff5c5c; */
+  border: none;
+  border-radius: 15px;
+  margin: 5px;
+  box-shadow: rgb(0 0 0 / 10%) 0px 4px 6px -1px, rgb(0 0 0 / 6%) 0px 2px 4px -1px;
+}
+
+.endCallBtn:hover{
+  margin-top:-2px;
+}
+
+.current{
+  text-decoration: underline;
+  /* text-decoration-color: #378ba0; */
+  text-decoration-thickness: 3px;
+}
+
+/* //////////////////////////////////// */
+/* METER NO COMUM */
+ /* Popup container */
+ .legenda {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.legenda .popuptext {
+  visibility: hidden;
+  width: 160px;
+  /* background-color: #555; */
+  /* color: #fff; */
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 35px;
+  left: 50%;
+  margin-left: -45px;
+  font-size:14px;
+}
+
+/* Popup seta */
+.legenda .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  /* border-color: #555 transparent transparent transparent; */
+}
+
+.legenda .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+/* POP UP meter universal ////////////////////////////////////////////////////////////*/
+#popupPartilha{
+  display: none;
+  width: 900px;
+  height: 470px;
+  
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+  
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  
+  /* background-color: #f8f8f8; */
+  /* border: 2px solid #aaa; */
+}
+
+
+#navegacao { 
+  grid-area: navegacao;
+  text-align: end;
+  z-index: 4;
+}
+
+.conteudo { 
+  grid-area: conteudo;
+  width:100%;
+  height:100%;
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  grid-template-areas: 
+      'opc1 opc2 opc3';
+}
+
+
+#fechar{
+  padding:10px;
+  height:25px;
+  width:auto;
+  cursor: pointer;
+  z-index:3;
+}
+
+#ok{
+  margin-top: 0;
+}
+
+#ok:hover{
+  margin-top: -2px;
+}
+/* .botoes button{
+  margin-top: 220px;
+} */
+.botoes button:hover{
+  margin-top: -12px;
+}
+.partilha button{
+  margin-top: 220px;
+}
+
+.partilha button:hover{
+  margin-top: 218px;
+}
+
+
+
+
+.conteudo li{
+  display: inline;
+  height:280px;
+  border-radius: 15px;
+}
+
+.conteudo img{
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+  border-radius: 15px;
+}
+
+.opcoes{ margin: 30px; }
+
+.opcoes:hover{ cursor: pointer; }
+
+#opcao1{ grid-area: opc1; }
+#opcao2{ grid-area: opc2; }
+#opcao3{ grid-area: opc3; }
+
+#selecao{
+  grid-area: opc1;
+  z-index: 99;
+}
+
+label{
+  display: block;
+  text-align: center;
+  margin-top: -10px;
+}
+
+/* /////////////////////////////////////////////  */
+.frame .text {
+  visibility:hidden;
+  position:absolute;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  /* background-color:#eeeeee; */
+  height:210px;
+  width:200px;
+}
+
+.frame:hover .text {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0.2s linear 0.2s, opacity 0.3s;
+}
+
+.frame .hide:hover{
+  visibility:hidden;
+  opacity: 0;
+  transition: visibility 0s linear 0.4s, opacity 0.4s;
+}
+.box {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  background-color: #f2f2f2;
+  border-radius: 15px;
+  
+  width:210px;
+  padding:4%;
+  margin:2%;
+  height:fit-content;
+  
+}
+
+.box p, .darker p{
+overflow: hidden;
+}
+
+.darker {
+  background-color: #ddd;
+  margin-left:160px;
+  display:inline-grid;
+  
+}
+
+
+.darker h3, .darker p{
+text-align: right;
+
+font-size:auto;
+}
+
+.time-left {
+  float: left;
+  color: #aaa;
+  margin-top:-13px;
+}
+
+.areaAtual:hover{
+  cursor: pointer;
+}

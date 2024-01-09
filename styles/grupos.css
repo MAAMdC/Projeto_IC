@@ -1,0 +1,53 @@
+.corpo {
+    display: grid;
+    grid-template-columns: 1280px;
+    grid-template-rows: 144px 72px 468px 36px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "titulo"
+      "botoes"
+      "contactos"
+      ".";
+  }
+  
+  .titulo { grid-area: titulo; }
+  
+  .contactos {
+    display: grid;
+    grid-template-columns: 340px 600px 340px;
+    grid-template-rows: 100%;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". caixa_contactos .";
+    grid-area: contactos;
+  }
+  
+  #caixa_contactos { grid-area: caixa_contactos; }
+  
+
+#contacto{
+    grid-template-columns: 100px 250px 50px 25px 50px 25px;
+}
+
+/* .botoes:hover{
+    margin-top:-2px;
+    transition:  margin-top 0.2s;
+} */
+
+/* .botoes { 
+    grid-area: botoes;
+    display:flex;
+    justify-content:center;
+} */
+
+img.botoes{
+    width: 40px;
+    height: auto;
+    cursor: pointer;
+}
+
+#nome{
+  cursor: pointer;
+}

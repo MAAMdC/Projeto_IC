@@ -1,0 +1,51 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+CORRIGIR
+-> No modo escuro os pop ups têm pouco Contraste
+-> Se o título de um grupo criado for muito grande não vai aparecer todo nas conversas
+-> Na página dos grupos se eu tiver criado 2 grupos com o mesmo nome eles não aparecem os dois lá por causa da cena alfabética, ele só substitui (ver o que podemos fazer ou cagamos só)
+
+PRIORIDADES:
+-> Partilha de vídeo da tarefa final
+
+GERAL
+-> Verificar e alterar textos dos popUps
+-> Verificar funcionamento da sidebar em todo o lado
+-> Análise heurística geral
+-> Mudar a cor do fundo dos pop Ups no modo escuro e tudo o que estiver mal 
+-> Ver shortcuts e cenas dessas 
+
+INDEX
+-> Legenda nas coisas
+
+AJUDA
+-> Finalizar a página completamente (com modo escuro)
+
+DEFINIÇÕES
+-> Finalizar a página completamente (com modo escuro)
+
+VIDEO
+-> Meter a partilha de ecrã a dar o vídeo das definições
+-> Fazer a distinção entre voltar e desligar a chamada (voltar sai mas mantém estado,
+   sair apaga os dados e a chamada em si) (Garantir que quando se sai os dados ficam guardados mas quando se desliga não )
+
+CONTACTOS
+-> Fazer página para adicionar contacto (se der tempo, mas era fixe de ter)
+-> Ver os redirecionamentos para o video
+
+PEQUENAS COISAS 
+-> Mais contactos e pessoas diferentes no menu de escolha de avatar
+-> Botão de esvaziar o lixo (quase feito)
+-> Layout não pode ser em ingles
+-> Scroll melhor pq não está a dar no mini chat
+-> limitar a criação de um contacto com o mesmo nome
+-> tentar meter a foto do contacto a mudar
+-> Ver no perfil o nome dos botões
+-> Load no modo escuro
+-> Meter o lixo a esvaziar sem meter as conversas de volta (ver as cores no modo escuro e claro dos botoes)
+-> ver o click no clip pq está muito grande (o link que nem si pq está lá)
+-> load do conteúdo do minichat
+-> video do joão 
+-> Hover do chat do joão
+-> As definições abrem sempre a claro resolver
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

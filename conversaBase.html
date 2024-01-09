@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+    <head>
+        <meta charset="UTF-8"/>
+
+        <title>GVC | Conversas</title>
+        <link rel="icon" href="img/icon.png" type="image">
+
+        <link rel="stylesheet" href="styles/conversas.css">
+        <link rel="stylesheet" href="styles/comum.css">
+        
+        <!-- <link rel="stylesheet" href="styles/popUp.css"> -->
+        <!-- <link rel="stylesheet" href="styles/dropdown.css"> -->
+        <link id="tema" rel="stylesheet" href="">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="scripts/conversasNOVAS.js"></script> 
+        <script src="scripts/sidebar.js"></script> 
+        <script src="scripts/comum.js"></script> 
+
+
+    </head> 
+
+    <body id = "container">
+        <div id="overlay"></div>
+        <div id="gridConversas">
+            <div class="mensagens custom-scrollbar">
+                <!-- <div class="caixaMensagem msg1" onclick = " substituiconversa('lol-123');"> <div class="info"> <div class="texto"> <h3 classe="nome">LOL-123</h3> <p classe="ultimaMsg">Parabéns a todos!</p></div><div class="icone"><img src="img/lol.png"></div></div></div> -->
+              </div>
+              <div class="chat">
+                  <div class="infoConversa">
+                      <h3 id="nomePagina"></h3>
+                      <div class="iconInfo">
+                        <img id="comeca" onclick="redireciona();" src="img/camera-de-videoazul.png">
+                        <img class="dropBtn" onclick="abreDropDown()" onmouseenter="fechaDropDown()" src="img/moreazul.png"> 
+                      </div>
+                  </div>
+                  <div id="areaParticipantes" class="areaParticipantes"></div>
+                  <div id="areaMensagens" class="areaMensagens">
+                  </div>
+                  <div id="envioMensagem" class="envioMensagem">
+                    <form>
+                        <ul>
+                            <li>
+                                <label for="mensagem"></label>
+                                <input id= "inputMensagem" class="texto" type="text" name="msg" placeholder="Escreva a sua mensagem" value="">
+                            </li>
+                            <li><a href="ficheiro.html" id="btn2"><img id="clip" class="clip clipMove" src="img/clip.png"></a></li>
+                            <li>
+                                <!-- <input class="envio" id="btnEnvio"  type="button"  src="img/acento-circunflexo-a-direita.png" alt="Submit" > -->
+                                <img class="envio" disabled="disabled" id="btnEnvio"  type="button"  src="img/acento-circunflexo-a-direita.png" alt="Submit" >
+                                <!-- <img class="seta" src="img/acento-circunflexo-a-direita.png"> -->
+                                
+                            </li>
+                        </ul>
+                    </form> 
+                  </div>
+              </div>
+
+              <div class="sidebarAberta">
+                <div class="sidebar">
+                  <div class="user">
+                    <div class="user">
+                        <img src="" id="imagem_username">
+                        <h3 id="username"></h3>
+                    </div>
+                  </div>
+                  <div class="botao">
+                        <button onclick="location.href = 'criarGrupo.html';"><img src="img/lapisbranco.png"><p>Novo Grupo</p></button>
+                  </div>
+                  <div class="nav">
+                    <ul>
+                    <li class="active">
+                        <a id="btn_conversas">
+                            <img src="img/comment-altazul.png">
+                            <p>Conversas</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="btn_grupos">
+                            <img src="img/usersazul.png">
+                            <p>Grupos</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="btn_contactos">
+                            <img src="img/livro-de-enderecosazul.png">
+                            <p>Contactos</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a id="btn_lixo">
+                            <img src="img/lixoazul.png">
+                            <p>Lixo</p>
+                        </a>
+                    </li>
+      
+                    <li>
+                      <a id="btn_definicoes">
+                          <img src="img/configuracoesazul.png">
+                          <p>Definições</p>
+                      </a>
+                    </li>
+                </ul>
+                  </div>
+                  <div class="nav baixo">
+                      <ul>
+                    <li>
+                        <a id="btn_menu">
+                            <img src="img/casaazul.png">
+                            <p>Menu</p>
+                        </a>
+                    </li>
+        
+                    <li>
+                      <a id="btn_sair" onclick="abrePopUp('Sair');">
+                          <img src="img/sairazul.png">
+                          <p>Sair</p>
+                      </a>
+                  </li>
+                </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div id="popupSair" class="popInativo">
+                <div class="corpoPopup">
+                    <div class="navegacao">
+                        <img class="fechar" src="img/cross-small.png" onclick="fechaPopUp('Sair');">
+                    </div>
+                    <div class="conteudoPop">
+                        <p>Todos os seus dados serão eliminados <br> Deseja sair da aplicação?</p>
+                    </div>
+                    <div class="botoes">
+                        <button id="sim" onclick="fechaPopUp('Sair');">Ficar</button>
+                        <button id ="nao"onclick="location.href='paginaReset.html';">Sair</button>
+                    </div>
+                  </div>
+            </div>
+
+              <div class="dropdown-content">
+                <a id="participantes" href="#" onclick="trocaJanela()">Ver participantes</a>
+                <a href="#" onclick="abrePopUp('Eliminar');">Eliminar mensagens</a>
+              </div>
+            
+              <div id="popupEliminar" class="popInativo">
+                <div class="corpoPopup">
+                    <div class="navegacao">
+                        <img class="fechar" src="img/cross-small.png" onclick="fechaPopUp('Eliminar');">
+                    </div>
+                    <div class="conteudoPop">
+                        <p>A conversa será eliminada</p>
+                    </div>
+                    <div class="botoes">
+                        <button id="sim" onclick="fechaPopUp('Eliminar');">Cancelar</button>
+                        <button id ="nao" onclick="eliminaConversa();">Eliminar</button>
+                    </div>
+                  </div>
+            </div>
+        </div>
+
+        <!-- <div id="popupVideo" class="popInativo">
+            <div class="corpoPopup">
+                <div class="navegacao">
+                    <img class="fechar" src="img/cross-small.png" onclick="fechaPopUp('Video');">
+                </div>
+                <div class="conteudoPop">
+                    <p>Irá iniciar uma nova chamada de vídeo <br> Deseja continuar?</p> -->
+                    <!-- <p>Uma nova chamada de vídeo <br> será iniciada dentro de: <br><span id="seconds-counter">5 segundos</span></p> -->
+                <!-- </div>
+                <div class="botoes">
+                    <button id="sim" onclick="trocaParaVideo();">Sim</button>
+                    <button id ="nao" onclick="fechaPopUp('Video');">Não</button> -->
+                    <!-- <button id="nao" onclick="fechaPopUp('Video');tempoEspera('cancela');">Cancelar</button> -->
+                <!-- </div>
+              </div>
+        </div> -->
+
+        <div id="popupDecorreChamada" class="popInativo">
+            <div class="corpoPopup">
+                <div class="navegacao">
+                    <img id="fechar" class="fechar" src="img/cross-small.png" onclick="fechaPopUp('DecorreChamada')">
+                </div>
+                <div class="conteudoPop">
+                    <p>Já está a decorrer uma chamada!</p>
+                </div>
+                <div class="botoes">
+                    <button id="ok" onclick="fechaPopUp('DecorreChamada')">Ok</button>
+                </div>
+              </div>
+        </div>
+
+    </body>
+
+    <!-- Melhorar isto -->
+    <!-- <script>
+        let nomePagina = localStorage.getItem("nomeNovaConversa");
+        $("#nomePagina").text(nomePagina);
+    </script> -->
+</html>

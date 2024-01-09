@@ -1,0 +1,86 @@
+.corpo {
+    display: grid;
+    grid-template-columns: 1280px;
+    grid-template-rows: 144px 72px 468px 36px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "titulo"
+      "ajuda"
+      "ajuda"
+      ".";
+  }
+  
+  .titulo { grid-area: titulo; }
+  
+  .contactos {
+    display: grid;
+    grid-template-columns: 240px 800px 240px;
+    grid-template-rows: 100%;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". caixa_contactos .";
+    grid-area: ajuda;
+    
+  }
+  
+  #caixa_contactos { grid-area: caixa_contactos; }
+  
+  .descricao { 
+      grid-area: descricao;
+      display:flex;
+      justify-content:center;
+  }
+  
+  #nome h3{
+      font-weight: 400;
+      width: 700px;
+      margin-left: 20px;
+  }
+
+  .contacto{
+    grid-template-columns: 100px 700px;
+  }
+
+  img.avatar {
+    width: 75px;
+    height: 75px;
+    /* margin-left: 20px; */
+    padding: 10px;
+}
+
+.corpoPopupAjuda {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* background-color:#eeeeee; */
+  display: grid;
+  grid-template-columns: 700px;
+  grid-template-rows: 110px 430px;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "navegacao"
+    "conteudo";
+    border-radius:15px;
+    margin-top:55px;
+    }
+
+.conteudoPopAjuda{ 
+/*   background-color:green; */
+  grid-area: conteudo;
+  width:100%;
+  height:100%;
+  display:flex;
+  z-index:-1;
+  margin-top:-60px;
+}
+
+.conteudoPopAjuda p{ 
+/*   background-color:#526552; */
+  padding:60px;
+  width:100%;
+  height:75%;
+}

@@ -1,0 +1,112 @@
+.corpo {
+    display: grid;
+    grid-template-columns: 1280px;
+    grid-template-rows: 144px 72px 468px 36px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "titulo"
+      "botoesCont"
+      "contactos"
+      ".";
+  }
+  
+  .titulo { grid-area: titulo; }
+  
+  .contactos {
+    display: grid;
+    grid-template-columns: 340px 600px 340px;
+    grid-template-rows: 100%;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". caixa_contactos .";
+    grid-area: contactos;
+  }
+  
+  #caixa_contactos { grid-area: caixa_contactos; }
+  
+  .descricao { 
+      grid-area: descricao;
+      display:flex;
+      justify-content:center;
+  }
+  
+  
+img.botoes{
+    width: 40px;
+    height: auto;
+    cursor: pointer;
+}
+
+
+
+  .descricao{
+    grid-area: botoesCont;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+  /* Ver se pode ser comum */
+  .adiciona{
+    grid-area: botoesCont;
+    width: 400px;
+    height: 40px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    /*   margin-top: 390px; */
+    /* background-color: #f2f2f2; */
+    border-radius:20px;
+
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+    /*   background-color:red; */
+    }
+
+.adiciona input{
+    width: 300px;
+    font-family: 'Poppins',sans-serif;
+    border:none;
+    background-color:transparent;
+      
+    }
+
+.envio{
+    width: 30px;
+    height: 23px;
+    border:none;
+    border-radius:20px;
+    /* background-color:#979797; */
+    margin-left:50px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    visibility: visible;
+    }
+    
+.envio:hover{
+    transform: scale(1.02);
+    cursor: pointer;
+    }
+
+#nome{
+  cursor: pointer;
+}
+
+
+.conteudoPop p {
+  width:400px;
+  margin-left:12px;
+}
+
+.imgSelect{
+  background-color: lightgray;
+  border-radius:10px;
+  transform: scale(1.1);
+}
+
+#imgSelect{
+  cursor: pointer;
+}
+
+.corpoPopup {
+  grid-template-columns: 91%;
+}

@@ -1,0 +1,142 @@
+.corpo {
+    display: grid;
+    grid-template: 100px 520px 100px/ 420px 800px;
+}
+
+.corpo h2 {
+    grid-area: 1 / 1 / span 1 / span 1;
+    text-align: center;
+    padding-top: 25px;
+    font-weight: 800;
+    font-size: 30px;
+    color: #378BA0;
+    background-color: #f2f2f2;
+    border-radius:15px 0 0 ;
+}
+
+.menu {
+    grid-area: 2 / 1 / span 2 / span 1;
+    background-color: #f2f2f2;
+    border-radius:0 0 0 15px;
+}
+
+#barraPesquisa {
+    width: 300px;
+    font-size: 16px;
+    padding: 10px;
+  /*border: 2px solid #eeeeee;*/
+    border-radius:50px; 
+    border:none;
+    display:block;
+    margin:auto;
+    background-color:#f9f9f9;
+}
+
+#definicoes {
+    list-style-type: none;
+    margin-top:45px;
+}
+
+.botaoDefinicao {
+    background-color: #f2f2f2;
+    font-size: 15px;
+    font-weight: 550;
+    cursor: pointer;
+    width: 100%;
+    padding: 15px;
+    border:none;
+    border-bottom: 2px solid #eeeeee;
+}
+
+.botaoDefinicao:hover{
+    background-color: #dfdfdfc4;
+}
+
+.selecionado {
+    background-color: #dfdfdfc4;
+    border:none;
+}
+
+#definicao {
+    grid-area: 1 / 2 / span 1 / span 1;
+    margin-top: 0px;
+}
+
+#paginaDefinicao {
+    grid-area: 2 / 2 / span 1 / span 1;
+}
+
+/*  meter botoes centrados como deve ser*/
+.botoes {
+/*     background-color:red; */
+    display: flex;
+    justify-content:space-evenly;
+    width:50%;
+    align-items: center;
+    margin-top:-90px;
+    margin-left:185px;
+}
+
+/* Ir buscar o code dos outros para ficar igual */
+.botoes button {
+    cursor: pointer;
+    border: 1px solid #ddd;
+    margin-left: 0px;
+    padding: 15px;
+    font-size: 15px;
+    font-weight: 550;
+}
+
+[type=radio] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+[type=radio]+img {
+    cursor: pointer;
+    width: 170px;
+    height: auto;
+    padding: 20px;
+    border: none;
+    border-radius: 3vh;
+    box-shadow:rgb(60 64 67 / 30%) 0px 1px 2px 0px, rgb(60 64 67 / 15%) 0px 1px 3px 1px;
+    background-color:#eeeded;
+}
+
+/* Fazer como os botoes iniciais */
+[type=radio]:checked+img {
+    background-color:#378ba0;
+}
+
+#formEscolheTema {
+    display: grid;
+    grid-template: 100px 420px / 400px 400px;
+}
+
+#formEscolheTema h3 {
+    grid-area: 1 / 1 / span 1 / span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+}
+
+#darkMode {
+    grid-area: 2 / 2 / span 1 / span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:-50px;
+    margin-right:40px;
+}
+
+#lightMode {
+    grid-area: 2 / 1 / span 1 / span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:-50px;
+    margin-left:40px;
+}

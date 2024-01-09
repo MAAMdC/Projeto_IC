@@ -1,0 +1,102 @@
+.corpoFicheiro {
+    display: grid;
+    grid-template-columns: 1280px;
+    grid-template-rows: 10% 20% 50% 10% 10%;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "navegacao"
+      "texto"
+      "escolhaFicheiro"
+      "botoes"
+      ".";
+  }
+  
+  .navegacaoFich {
+    grid-area: navegacao;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin:10px;
+  }
+
+   .navegacaoFich img {
+    height:35px;
+    width:auto;
+  }
+  .navegacaoFich img:hover {
+    margin-top:-2px;
+    cursor: pointer;
+    }
+  .texto { 
+    grid-area: texto; 
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    }
+  
+  .escolhaFicheiro { 
+    grid-area: escolhaFicheiro;
+    display:flex;
+    margin:auto;
+    margin-top:150px;
+   }
+  
+  .escolhaFicheiro p{ 
+    display:flex;
+    justify-content:center;
+  }
+
+.fich{
+  display:block;
+  /* background:#e1e1e1; */
+  border-radius:15px;
+  height:220px;
+  margin-top:-90px;
+  margin-left:8px;
+  padding:5px;
+  width:210px;
+  cursor: pointer;
+}
+
+  .fich img{
+    display:block;
+    margin:auto;
+    margin-top:40px;
+    width:50%;
+
+  }
+
+  .botoesFicheiro { 
+    grid-area: botoes; 
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
+    width:55%;
+    margin:auto;
+    margin-top:90px;
+  }
+/*   
+  .botoesFicheiro button{
+    width:150px;
+    height:45px;
+  
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 25px;
+    background: lightgrey;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    justify-content:space-evenly;
+    font-family: 'Poppins',sans-serif;
+  
+  } */
+  
+  .escolhido{
+    background-color: #378ba0;
+}
+
+#enviar{
+  background-color: lightgrey;
+}

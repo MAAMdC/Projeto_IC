@@ -1,0 +1,410 @@
+/* GERAL /////////////////////////////////////////////// */
+:root{
+    background-color: #378BA0;
+  }
+  
+h1{
+  color: #378BA0;
+}
+/* LAYOUT ////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+#container {
+  background-color: #f8f8f8;
+}
+
+div#overlay {
+  background-color:#4444447d;
+}
+
+.sidebar{
+  background-color:#f2f2f2;
+  border-left:3px solid #f0f0f0;
+}
+
+.botoes button{
+  background-color:#378BA0;
+  color: #eee;
+}
+
+.nav li:hover{
+  background-color: #dfdfdfc4;
+}
+
+.nav a{
+  color:black;
+}
+
+.active p{
+  color:#378BA0;
+}
+
+.sidebarFechada:hover{
+  background-color:#f2f2f2;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #d8d8d8;
+}
+
+input, select, textarea{
+  color: black;
+}
+
+/* PÁGINA PRINCIPAL //////////////////////////////////////////////////////////////////////////////////////////////////// */
+img.mainIcones{
+    background-color: rgb(238, 237, 237);
+}
+
+/* PÁGINA CONVERSAS //////////////////////////////////////////////////////////////////////////////////////////////////// */
+.mensagens {
+    background-color:#f2f2f2;
+}
+
+.caixaMensagem {
+    border-bottom: 2px solid #eeeeee; 
+    border-right:3px solid #f0f0f0;
+}
+
+.caixaMensagem:hover{
+    background-color:#dfdfdfc4;
+}
+
+.texto p { 
+    color: #909090
+}
+
+.selected{
+  background-color: #dadada;
+  border-bottom: 3px solid #d7d7d7;
+  border-right: 3px solid #d7d7d7;
+}
+
+.infoConversa {
+    border-bottom: 2px solid #eeeeee;
+}
+
+.infoConversa h3{
+    color:#378ba0;
+}
+
+.box {
+    background-color: #f2f2f2;
+}
+
+.darker {
+    background-color: #ddd;
+}
+
+.time-right, .time-left {
+    color: #909090;
+}
+
+button {
+    background: #378BA0;
+}
+
+button p{
+    color:white;
+}
+
+.envioMensagem{
+  background-color: #f2f2f2;
+}
+
+  .envio{
+    background-color:#378BA0;
+}
+textarea{
+    color: grey;
+  }
+
+  .separator .line{
+    background-color: #e5e5e5;
+  }
+  
+  .separator p{
+
+    color:#aaa;
+  }
+  
+  /* por no comum - contactos */
+  #caixa_contactos{
+  
+    border: 3px solid #ccc;
+    border: 3px solid#e1e1e161;
+
+    background-color:#eeeeee;
+  
+  }
+  
+  #contacto{
+    border-bottom:3px solid #e1e1e161 ;
+
+  }
+  
+  #contacto:hover{
+    background-color: #e3e3e3;
+    cursor: pointer;
+   }
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* CRIAR GRUPO ///////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.adicionados{
+    background-color:#eeeeee;
+  }
+
+  .adiciona{
+    background-color: #f2f2f2;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+  }
+
+  /* .confirmacao button{
+    background-color:#378a9f;
+    color:white;
+  } */
+
+  #enviar{
+    background-color: #08b86d; 
+    color:#eee;
+  }
+  
+
+  #caixa_contactos{
+    border: 3px solid #ccc;
+    border: 3px solid#e1e1e161;
+    background-color:#eeeeee;
+  }
+
+  #contacto{
+    border-bottom:3px solid #e1e1e161 ;
+  }
+  
+#contacto:hover{
+    background-color: #e3e3e3;
+   }
+
+   .nome input{
+    color: grey; 
+    border-bottom: solid #378BA0 0.3vh; /* Linha embaixo de cada input */
+    color:black;
+  }
+  input.envio{
+    background-color:#979797;
+    /* background-color:#378BA0; */
+}
+  #mensagem_erro1 {
+    color: red;
+  }
+  #mensagem_erro2{
+    color: red;
+  }
+  #mensagem_erro3{
+    color: red;
+  }
+
+  .imgSelect{
+    background-color: lightgray;
+  }
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+
+
+
+
+
+
+
+
+
+/* PÁGINA DEFINIÇÕES /////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.corpo h2 {
+    color: #378BA0;
+    background-color: #f2f2f2;
+}
+
+.menu {
+    background-color: #f2f2f2;
+}
+
+#barraPesquisa {
+    background-color:#f9f9f9;
+}
+
+.botaoDefinicao {
+    background-color: #f2f2f2;
+    border-bottom: 2px solid #eeeeee;
+}
+
+.botaoDefinicao:hover{
+    background-color: #dfdfdfc4;
+}
+
+.selecionado {
+    background-color: #dfdfdfc4;
+}
+
+[type=radio]+img {
+    background-color:#eeeded;
+}
+
+/* Fazer como os botoes iniciais */
+[type=radio]:checked+img {
+    background-color:#378ba0;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* POPUP /////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.popInativo{
+  background-color: #f8f8f8;
+  border: 2px solid #aaa;
+}
+
+#nao{
+  background-color: #fa3a3ade; 
+  color:#eee;
+}
+
+#sim{
+  background-color: #08b86d; 
+  color:#eee;
+}
+
+#ok{
+  background-color: #378BA0; 
+  color:#eee;
+}
+
+.popEscolheImg{
+  background-color: #f8f8f8;
+  border: 2px solid #aaa;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* DROPDOWN //////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.dropdown-content {
+  background-color: #e3e3e3; 
+}
+
+.dropdown-content a {
+  color: black;
+}
+
+.dropdown-content a:hover {
+  background-color: #dddddd;
+  }
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* FICHEIRO //////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.fich{
+  background:#e1e1e1;
+  }
+  
+  .escolhido{
+    background-color: #378ba0;
+  }
+  
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* VIDEO /////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.miniChat {
+  background-color: #eeeeee;
+}
+
+.frame {
+  border: 3px solid #ccc;
+  background: #eee;
+}
+
+.optionButton {
+  background-color: #eeeeee;
+}
+.endCallBtn {
+
+  background-color: #ff5c5c;
+}
+
+.endCallBtn:hover{
+  margin-top:-2px;
+}
+
+.current{
+  text-decoration-color: #378ba0;
+}
+
+/* //////////////////////////////////// */
+
+.legenda .popuptext {
+  background-color: #555;
+  color: #fff;
+}
+
+/* Popup seta */
+.legenda .popuptext::after {
+  border-color: #555 transparent transparent transparent;
+}
+
+/* POP UP meter universal ////////////////////////////////////////////////////////////*/
+#popupPartilha{
+  background-color: #f8f8f8;
+  border: 2px solid #aaa;
+}
+
+.botoes button{
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.conteudo li{
+  border: 2px solid gray;
+}
+
+#selecao{
+  background-color: black;
+}
+
+/* /////////////////////////////////////////////  */
+.frame .text {
+  background-color:#eeeeee;
+}
+
+/* comum */
+/* .box {
+  background-color: #f2f2f2;
+}
+
+.darker {
+  background-color: #ddd;
+} */
+
+/* .time-left {
+  color: #aaa;
+} */
+
+/* Comum */
+#contacto{  
+  border-bottom:3px solid #e1e1e161 ;
+}
+
+#contacto:hover{
+  background-color: #e3e3e3;
+ }
+ 
+.btnColor{
+  background-color: #378ba0;
+}
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* AJUDA /////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.corpoPopupAjuda {
+  background-color:#eeeeee; 
+  border: 3px solid#e1e1e161;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
