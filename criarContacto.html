@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="PT">
+
+    <head>
+        <meta charset="UTF-8"/>
+
+        <title>GVC | Contactos</title>
+
+        <link rel="stylesheet" href="styles/comum.css">
+        <link rel="stylesheet" href="styles/popUp.css">
+        <link rel="stylesheet" href="styles/perfil.css">
+        <link id="tema" rel="stylesheet" href="">
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+        <!-- <script src="scripts/perfil.js"> </script> -->
+        <script src="scripts/sidebar.js"></script>
+        <script src="scripts/comum.js"></script>
+
+
+    </head> 
+
+
+    <body id = "container">
+        <div id="grid">
+            <div class="sidebarFechada">
+                <div class="sidebar">
+                    <div class="user">
+                        <div class="user">
+                            <img src="" id="imagem_username">
+                            <h3 id="username"></h3>
+                        </div>
+                    </div>
+    
+                    <div class="nav">
+                        <ul>
+                            <li>
+                                <a id="btn_conversas">
+                                    <img src="img/comment-altazul.png">
+                                    <p>Conversas</p>
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a id="btn_grupos">
+                                    <img src="img/usersazul.png">
+                                    <p>Grupos</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="btn_contactos">
+                                    <img src="img/livro-de-enderecosazul.png">
+                                    <p>Contactos</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="btn_lixo">
+                                    <img src="img/lixoazul.png">
+                                    <p>Lixo</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="btn_definicoes">
+                                    <img src="img/configuracoesazul.png">
+                                    <p>Definições</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div class="nav baixo">
+                        <ul>
+                            <li>
+                                <a id="btn_menu">
+                                    <img src="img/casaazul.png">
+                                    <p>Menu</p>
+                                </a>
+                            </li>
+            
+                            <li>
+                                <a id="btn_sair" onclick="abrePopUp('Sair');">
+                                    <img src="img/sairazul.png">
+                                    <p>Sair</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="corpo">
+                <div class="titulo">
+                    <h1>ADICIONAR CONTACTO</h1>
+                    <div class="separator">
+                        <div class="line"></div>
+                    </div>
+                </div>
+                <div id="resto">
+
+                    <div id = "avatar">
+                        <img src="" alt="" id="trocar">
+                        <button id="editar_avatar"> Escolher foto </button>
+                    </div>
+
+                    <form id="outros">
+                        <input type="text" name="username" placeholder="Nome do contacto">
+                        <button type="button" id="guardar"> Guardar </button>
+                    </form>
+
+                    <div id="avatares">
+                        <div id="img1">
+                            <img src="img/Afonso.png" alt="" id="imagem1">
+                        </div>
+
+                        <div id="img2">
+                            <img src="img/alice.png" alt="" id="imagem2">
+                        </div>
+
+                        <div id="img3">
+                            <img src="img/avo.png" alt="" id="imagem3">
+                        </div>
+
+                        <div id="img4">
+                            <img src="img/Conguito.png" alt="" id="imagem4">
+                        </div>
+
+                        <div id="img5">
+                            <img src="img/diogo.png" alt="" id="imagem5">
+                        </div>
+
+                        <div id="img6">
+                            <img src="img/fred.png" alt="" id="imagem6">
+                        </div>
+
+                        <div id="img7">
+                            <img src="img/carolina.png" alt="" id="imagem7">
+                        </div>
+
+                        <div id="img8">
+                            <img src="img/joana.png" alt="" id="imagem8">
+                        </div>
+
+                        <div id="img9">
+                            <img src="img/personal.png" alt="" id="imagem9">
+                        </div>
+
+                    </div>
+
+                    <div id="popupPerfil" class="popInativo">
+                        <div class="corpoPopup">
+                            <div class="navegacao">
+                                <li id="btn_fechar"><img class="fechar" src="img/cross-small.png"></li>
+                            </div>
+                            <div class="conteudoPop">
+                                <p>O seu nome e foto foram guardados com sucesso</p>
+                            </div>
+                            <div class="botoes">
+                                <button id="btn_ok" >Ok!</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>

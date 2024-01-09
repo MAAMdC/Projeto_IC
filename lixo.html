@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="PT">
+
+    <head>
+        <meta charset="UTF-8"/>
+
+        <!-- Título -->
+        <title>GVC | Lixo</title>
+        <link rel="icon" href="img/icon.png" type="image">
+
+        <!-- Folhas de estilo -->
+        <link rel="stylesheet" href="styles/comum.css">
+        <link rel="stylesheet" href="styles/lixo.css">
+        <link id="tema" rel="stylesheet" href="">
+        <!-- <link rel="stylesheet" href="styles/popUp.css"> -->
+        
+        <!-- Scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="scripts/lixo.js"></script> 
+        <!-- <script src="scripts/conversas.js"></script>  -->
+        <script src="scripts/sidebar.js"></script>
+        <script src="scripts/comum.js"></script>
+    </head> 
+
+
+    <body id = "container">
+        <div id="overlay"></div>
+        <div id="grid">
+            <div class="sidebarFechada">
+                <div class="sidebar">
+                    <div class="user">
+                        <div class="user">
+                            <img src="" id="imagem_username">
+                            <h3 id="username"></h3>
+                        </div>
+                    </div>
+    
+                    <div class="nav">
+                        <ul>
+                            <li>
+                                <a id="btn_conversas">
+                                    <img src="img/comment-altazul.png">
+                                    <p>Conversas</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="btn_grupos">
+                                    <img src="img/usersazul.png">
+                                    <p>Grupos</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="btn_contactos">
+                                    <img src="img/livro-de-enderecosazul.png">
+                                    <p>Contactos</p>
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a id="btn_lixo">
+                                    <img src="img/lixoazul.png">
+                                    <p>Lixo</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a id="btn_definicoes">
+                                    <img src="img/configuracoesazul.png">
+                                    <p>Definições</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div class="nav baixo">
+                        <ul>
+                            <li>
+                                <a id="btn_menu">
+                                    <img src="img/casaazul.png">
+                                    <p>Menu</p>
+                                </a>
+                            </li>
+            
+                            <li>
+                                <a id="btn_sair" onclick="abrePopUp('Sair');">
+                                    <img src="img/sairazul.png">
+                                    <p>Sair</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="corpo">
+                <div class="titulo">
+                    <h1>LIXO</h1>
+                    <div class="separator">
+                        <div class="line"></div>
+                    </div>
+                </div>
+
+                <div class="contactos">
+                    <div id="caixa_contactos"></div>
+                </div>
+                <div class="descricao">
+                    <div class="botoes">
+                        <button id="ok" onclick="abrePopUp('Recuperado');">Recuperar</button>
+                        <span class="separa"></span>
+                        <button id="nao" onclick="abrePopUp('Reset');">Esvaziar</button>
+                    </div>
+                </div>
+                <div id="popupSair" class="popInativo">
+                    <div class="corpoPopup">
+                        <div class="navegacao">
+                            <img class="fechar" src="img/cross-small.png" onclick="fechaPopUp('Sair');">
+                        </div>
+                        <div class="conteudoPop">
+                            <p>Todos os seus dados serão eliminados <br> Deseja sair da aplicação?</p>
+                        </div>
+                        <div class="botoes">
+                            <button id="sim" onclick="fechaPopUp('Sair');">Ficar</button>
+                            <button id ="nao"onclick="location.href='paginaReset.html';">Sair</button>
+                        </div>
+                      </div>
+                </div>
+    
+            </div>    
+        </div>
+        <div id="popupRecuperado" class="popInativo">
+            <div class="corpoPopup">
+                <div class="navegacao">
+                    <img class="fechar" src="img/cross-small.png">
+                </div>
+                <div class="conteudoPop">
+                    <p>O grupo foi recuperado com sucesso</p>
+                </div>
+                <div class="botoes">
+                    <button id="ok" onclick="fechaPopUp('Recuperado'); atualizaConversa();">Ok</button>
+                </div>
+              </div>
+        </div>
+        <div id="popupReset" class="popInativo">
+            <div class="corpoPopup">
+                <div class="navegacao">
+                    <img class="fechar" onclick="fechaPopUp('Reset');" src="img/cross-small.png">
+                </div>
+                <div class="conteudoPop">
+                    <p>O conteúdo do lixo será eliminado se continuar</p>
+                </div>
+                <div class="botoes">
+                    <button id="sim" onclick="fechaPopUp('Reset');">Cancelar</button>
+                    <button id="nao" onclick="apagaTudo();">Continuar</button>
+                </div>
+              </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="PT">
+
+    <head>
+        <meta charset="UTF-8"/>
+
+        <title>GVC | Ajuda</title>
+        <link rel="icon" href="img/icon.png" type="image">
+
+        <link rel="stylesheet" href="styles/comum.css">
+        <link rel="stylesheet" href="styles/ajuda.css">
+        <link id="tema" rel="stylesheet" href="">
+        <!--<link rel="stylesheet" href="styles/contactos.css">--> 
+
+        <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+        <!-- <script src="scripts/contactos.js"></script> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="scripts/sidebar.js"></script> 
+        <script src="scripts/comum.js"></script>
+        <script src="scripts/ajuda.js"></script>
+    </head> 
+
+
+    <body id = "container">
+        <div id="grid">
+            <div id="overlay"></div>
+            <div class="sidebarFechada">
+                <div class="sidebar">
+                    <div class="user">
+                        <div class="user">
+                            <img src="" id="imagem_username">
+                            <h3 id="username"></h3>
+                        </div>
+                    </div>
+    
+                    <div class="nav">
+                        <ul>
+                            <li>
+                                <a id="btn_conversas">
+                                    <img src="img/comment-altazul.png">
+                                    <p>Conversas</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="btn_grupos">
+                                    <img src="img/usersazul.png">
+                                    <p>Grupos</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="btn_contactos">
+                                    <img src="img/livro-de-enderecosazul.png">
+                                    <p>Contactos</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="btn_lixo">
+                                    <img src="img/lixoazul.png">
+                                    <p>Lixo</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="btn_definicoes">
+                                    <img src="img/configuracoesazul.png">
+                                    <p>Definições</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div class="nav baixo">
+                        <ul>
+                            <li>
+                                <a id="btn_menu">
+                                    <img src="img/casaazul.png">
+                                    <p>Menu</p>
+                                </a>
+                            </li>
+            
+                            <li>
+                                <a id="btn_sair" onclick="abrePopUp('Sair');">
+                                    <img src="img/sairazul.png">
+                                    <p>Sair</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="corpo">
+               
+                <div class="titulo">
+                    <h1>AJUDA</h1>
+                    <div class="separator">
+                        <div class="line"></div>
+                    </div>
+                </div>
+
+                <div class="contactos">
+                    <div id="caixa_contactos">
+                        <div class="contacto"> 
+                            <li id= "avatar "><img src="img/interrogationazul.png" class="avatar"></li> 
+                            <li><h3 class="ajuda" onclick="toggleHelpSection(1)">O que faz cada ícone da aplicação?</h3></li>
+                            <img src="img/angle-small-down.png" onclick="toggleHelpSection(1)" id="helpViewer1">
+
+                        </div>
+                        <div id="dropdownContent1" class="according_anwser">
+                            <div id="icones">
+                                <li id="ic">
+                                    <img src="img/comment-altazul.png" id="img_texto">
+                                    <p id="texto">Conversas, onde pode consultá-las ou escrever mensagens para os seus amigos.</p>
+                                </li>
+                                
+                                <li id="ic">
+                                    <img src="img/usersazul.png" id="img_texto">
+                                    <p id="texto">Grupos, onde se pode iniciar uma chamada de video e ter acesso às mensagens dos mesmos. Pode-se também aceder à criação de um grupo novo.</p>
+                                </li> 
+                                
+                                <li id="ic">
+                                    <img src="img/livro-de-enderecosazul.png" id="img_texto">
+                                    <p id="texto">Contactos, aqui pode-se adicionar contactos, aceder às mensagens ou até mesmo fazer uma chamada de vídeo com um só contacto.</p>
+                                </li> 
+                                
+                                <li id="ic">
+                                    <img src="img/lixoazul.png" id="img_texto">
+                                    <p id="texto">Lixo, caso elimine uma mensagem é aqui onde se pode recuperá-la ou até mesmo eliminá-la em definitivo.</p>
+                                </li> 
+                                
+                                <li id="ic">
+                                    <img src="img/configuracoesazul.png" id="img_texto">
+                                    <p id="texto">Definições, onde pode alterar o tema da aplicação, o tamanho da letra, entre outras configurações disponíveis.</p>
+                                </li> 
+
+                                <li id="ic">
+                                    <img src="img/casaazul.png" id="img_texto">
+                                    <p id="texto">Página inicial, pode aceder à página inicial da aplicação.</p>
+                                </li> 
+                                
+                                <li id="ic">
+                                    <img src="img/sairazul.png" id="img_texto">
+                                    <p id="texto">Sair, tenha muito atenção ao clicar neste botão visto que ele fará com que todos os seus dados sejam colocados de origem.</p>
+                                </li>
+
+                                <li id="ic">
+                                    <img src="img/camera-de-videoazul.png" id="img_texto">
+                                    <p id="texto">Video-chamada, permite começar uma video-chamda com um contacto ou um grupo.</p>
+                                </li>
+                                
+                                <li id="ic">
+                                    <img src="img/moreazul.png" id="img_texto">
+                                    <p id="texto">Este botão, que se encontra nas conversas, permite visualizar os participantes que estão na conversa assim como eliminar a conversa.</p>
+                                </li>
+
+                            </div>
+                        </div>
+                     
+
+
+                        <div class="contacto"> 
+                            <li id= "avatar "><img src="img/comment-altazul.png" class="avatar"></li> 
+                            <li><h3 class="ajuda" onclick="toggleHelpSection(2)">Como enviar mensagens?</h3></li> 
+                            <img src="img/angle-small-down.png" onclick="toggleHelpSection(2)" id="helpViewer2">                              
+                        </div>
+                        <div id="dropdownContent2" class="according_anwser">
+                            <p>
+                                Para enviar uma mensagem basta aceder à página das conversas clicando no ícone das conversas, e selecionar uma conversa. Após isto poderá enviar a mensagem que pretender.
+                                Também pode através da página dos grupos e da página dos contactos, enviar mensagem. Basta aceder à página que pretende, clicando nos devidos ícones desejados e logo a seguir clicar no ícone das mensagens que aparecerá de frente do contacto ou grupo que pretenda enviar mensagem.
+                            </p>
+                        </div>
+
+
+
+                        <div class="contacto"> 
+                            <li id= "avatar "><img src="img/camera-de-videoazul.png" class="avatar"></li> 
+                            <li><h3 class="ajuda" onclick="toggleHelpSection(3)">Como iniciar uma chamada de vídeo?</h3></li> 
+                            <img src="img/angle-small-down.png" onclick="toggleHelpSection(3)" id="helpViewer3">
+                        </div>
+                        <div id="dropdownContent3" class="according_anwser">
+                            <p>
+                                Para iniciar uma chamada de vídeo basta aceder à página das mensagens, e na conversa terá um ícone de chamada, após clicar terá então inicializado uma chamada de vídeo.
+                            </p>
+                        </div>
+                        
+
+                                                
+                        <div class="contacto">
+                            <li id= "avatar "><img src="img/lixoazul.png" class="avatar"></li> 
+                            <li><h3 class="ajuda" onclick="toggleHelpSection(4)">Como eliminar e recuperar conversas?</h3></li>  
+                            <img src="img/angle-small-down.png" onclick="toggleHelpSection(4)" id="helpViewer4">                                                                
+                        </div>
+                        <div id="dropdownContent4" class="according_anwser">
+                            <p>
+                                Para eliminar conversas basta ir às mensagens e clicar nos três pontinhos que aparecem no canto superior direito da conversa e clicar no "eliminar conversa". Para recuperar a mesma conversa, basta aceder ao lixo e clicar no botão que diz "recuperar", e assim a conversa irá aparecer na página das conversas.
+                            </p>
+                        </div>
+
+
+
+                        <div class="contacto"> 
+                            <li id= "avatar "><img src="img/livro-de-enderecosazul.png" class="avatar"></li> 
+                            <li><h3 class="ajuda" onclick="toggleHelpSection(5)">Como criar contactos?</h3></li>
+                            <img src="img/angle-small-down.png" onclick="toggleHelpSection(5)" id="helpViewer5">
+                        </div>
+                        <div id="dropdownContent5" class="according_anwser">
+                            <p>
+                                Para criar contactos, terá que aceder aos contactos e em cima dos contactos terá uma secção onde poderá meter os contactos que deseja criar.
+                            </p>
+                        </div>  
+
+
+                        
+                        <div class="contacto"> 
+                            <li id= "avatar "><img src="img/personalazul.png" class="avatar"></li> 
+                            <li><h3 class="ajuda" onclick="toggleHelpSection(6)">Como configurar o seu perfil?</h3></li>
+                            <img src="img/angle-small-down.png" onclick="toggleHelpSection(6)" id="helpViewer6">
+                        </div>
+                        <div id="dropdownContent6" class="according_anwser">
+                            <p>
+                                Para configurar o perfil, terá que estar no menu principal e clicar no ícone do perfil, que está situado no canto inferior direito. Após clicar, terá uma secção onde poderá meter o seu nome e outra para escolher o seu avatar. Após terminar basta guardar e fica com o seu perfil criado.
+                            </p>
+                        </div>
+
+
+
+                        <div class="contacto"> 
+                            <li id= "avatar "><img src="img/sairazul.png" class="avatar"></li> 
+                            <li><h3 class="ajuda"onclick="toggleHelpSection(7)">Como reeiniciar os dados da aplicação?</h3></li>
+                            <img src="img/angle-small-down.png" onclick="toggleHelpSection(7)" id="helpViewer7">
+                        </div>
+                        <div id="dropdownContent7" class="according_anwser">
+                            <p>
+                                Para isso terá de sair da aplicação através do respetivo botão. Porém tenha cuidado ao clicar nele visto que tudo voltará à origem correndo assim o risco de perder grandes conversas com os seus amigos.
+                            </p>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+            <div id="popupSair" class="popInativo">
+                <div class="corpoPopup">
+                    <div class="navegacao">
+                        <img class="fechar" src="img/cross-small.png" onclick="fechaPopUp('Sair');">
+                    </div>
+                    <div class="conteudoPop">
+                        <p>Todos os seus dados serão eliminados <br> Deseja sair da aplicação?</p>
+                    </div>
+                    <div class="botoes">
+                        <button id="sim" onclick="fechaPopUp('Sair');">Ficar</button>
+                        <button id ="nao"onclick="location.href='paginaReset.html';">Sair</button>
+                    </div>
+                  </div>
+            </div>
+        </div> 
+    </body>
+</html>
+
